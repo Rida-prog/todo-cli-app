@@ -85,4 +85,23 @@ program
         }
     });
 
+   // COMMAND: todo delete <id>
+program
+  .command('delete <id>')
+  .description('Delete a To-Do item permanently by its ID')
+  .action((idStr: string) => {
+    const id = parseInt(idStr);
+    const todos = loadTodos();
+    
+    // Use filter() to create a NEW list that EXCLUDES the item with the given ID
+    const newTodos = todos.filter(t => t.id !== id);
+
+    if (newTodos.length < todos.length) {
+        saveTodos(newTodos);
+        console.log(chalk.red.bold(` Deleted To-Do ID ${id}.`));
+    } else {
+        console.log(chalk.yellow(` To-Do with ID ${id} not found. Nothing deleted.`));
+    }
+  }); 
+
 program.parse(process.argv);
