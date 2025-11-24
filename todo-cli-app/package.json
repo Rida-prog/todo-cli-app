@@ -1,5 +1,5 @@
 {
-    "name": "todo-cli-app",
+    "name": "@rida-prog/todo-cli-app",
     "version": "1.0.0",
     "description": "A command line Interface To-Do List Manager",
     "main": "index.js",
