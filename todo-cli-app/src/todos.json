@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "task": "Learn TypeScript",
+        "completed": false
+    
+    },
+    {
+        "id": 2,
+        "task": "Build a CLI app",
+        "completed": false
+    }
+]
