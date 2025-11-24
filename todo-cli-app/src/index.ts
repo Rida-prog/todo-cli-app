@@ -15,7 +15,7 @@ interface todo {
     completed: boolean;
 }
 
-function loadTodos(): Todo[] {
+function loadTodos(): todo[] {
     if (!fs.existsSync(DATA_FILE)) {
         return [];
     }
@@ -28,7 +28,7 @@ function loadTodos(): Todo[] {
     }
 }
 
-function saveTodos(todos: Todo[]): void {
+function saveTodos(todos: todo[]): void {
     fs.writeFileSync(DATA_FILE, JSON.stringify(todos, null, 2));
 }
 program
@@ -41,7 +41,7 @@ program
     .action((task: string) => {
         const todos = loadTodos();
         const newId = todos.length > 0 ? todos[todos.length - 1].id + 1 : 1;
-        const newTodo: Todo = {
+        const newTodo: todo = {
             id: newId,
             task: task,
             completed: false
