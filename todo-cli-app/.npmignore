@@ -1,0 +1,7 @@
+# Ignore development files
+src/
+tsconfig.json
+.vscode/
+
+# Ignore local dependencies
+node_modules/
