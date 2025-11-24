@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "task": "Write the final code review",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "task": "Commit the changes to Git",
+    "completed": true
+  },
+  {
+    "id": 3,
+    "task": "Celebrate building a CLI app!",
+    "completed": false
+  }
+]
