@@ -109,4 +109,19 @@ program
         console.log(chalk_1.default.red(`To-Do with ID ${id} not found.`));
     }
 });
+program
+    .command('delete <id>')
+    .description('Delete a To-Do item permanently by its ID')
+    .action((idStr) => {
+    const id = parseInt(idStr);
+    const todos = loadTodos();
+    const newTodos = todos.filter(t => t.id !== id);
+    if (newTodos.length < todos.length) {
+        saveTodos(newTodos);
+        console.log(chalk_1.default.red.bold(` Deleted To-Do ID ${id}.`));
+    }
+    else {
+        console.log(chalk_1.default.yellow(` To-Do with ID ${id} not found. Nothing deleted.`));
+    }
+});
 program.parse(process.argv);
