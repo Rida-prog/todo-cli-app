@@ -60,13 +60,13 @@ program
             console.log(chalk.yellow('No To-Do items found.'));
             return;
         }
-        console.log(chalk.bold.cyan('/n--- Your To-Do List ---'));
+        console.log(chalk.bold.cyan('\n--- Your To-Do List ---'));
         todos.forEach(todo => {
             const status = todo.completed ? chalk.strikethrough.gray('Done') : chalk.red('TODO');
             const taskText = todo.completed ? chalk.gray(todo.task) : chalk.white(todo.task);
             console.log(`[${todo.id}] ${status} ${taskText}`);
         });
-        console.log(chalk.bold.cyan('-----------------------/n'));
+        console.log(chalk.bold.cyan('-----------------------\n'));
     });
 
 program
