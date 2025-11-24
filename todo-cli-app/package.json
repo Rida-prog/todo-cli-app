@@ -1,0 +1,30 @@
+{
+    "name": "todo-cli-app",
+    "version": "1.0.0",
+    "description": "A command line Interface To-Do List Manager",
+    "main": "index.js",
+        "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "echo 'temp build'", 
+    "test-cli": "npm link"
+},
+    "keywords": [
+        "todo",
+        "cli",
+        "typescript"
+    ],
+    "author": "Rida fatima",
+    "license": "ISC",
+    "bin": {
+        "todo": "./dist/index.js"
+    },
+    "dependencies": {
+        "chalk": "^5.6.2",
+        "commander": "^14.0.2"
+    },
+    "devDependencies": {
+        "@types/node": "^24.10.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.3"
+ }
+}
