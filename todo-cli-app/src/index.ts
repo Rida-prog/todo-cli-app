@@ -85,7 +85,6 @@ program
         }
     });
 
-   // COMMAND: todo delete <id>
 program
   .command('delete <id>')
   .description('Delete a To-Do item permanently by its ID')
@@ -93,7 +92,6 @@ program
     const id = parseInt(idStr);
     const todos = loadTodos();
     
-    // Use filter() to create a NEW list that EXCLUDES the item with the given ID
     const newTodos = todos.filter(t => t.id !== id);
 
     if (newTodos.length < todos.length) {
