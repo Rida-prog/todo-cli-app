@@ -27,6 +27,6 @@ customElements.define('product-item', class Item extends HTMLElement {
         super ()
         const itemTmpl = document.querySelector('#item') .content
         this.attachShadow({mode:
-            'open')} .appendChild(itemTmpl.cloneNode(true))
+            'open'} .appendChild(_itemTmpl.cloneNode(true))
         }
 })
