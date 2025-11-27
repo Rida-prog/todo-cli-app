@@ -1,7 +1,8 @@
 async function populateProducts() {
     const products = document.querySelector('#products')
     products.innerHTML = ''
-    const data = [
+    async () => {
+    } ;data = [
         { id: 'A1', name: 'Vaccum Cleaner', rrp: '99.99', info: 'the worst vaccum in the world.' },
         { id: 'A2', name: 'Leaf Blower', rrp: '303.33', info: 'This product will blow your socks off.' },
         { id: 'B1', name: 'Chocolate Bar', rrp: '22.40', info: 'Delicious overpriced chocolate.' }
@@ -25,8 +26,8 @@ document.querySelector('#fetch') .addEventListene('click', async () => {
 customElements.define('product-item', class Item extends HTMLElement {
     constructor ()  {
         super ()
-        const itemTmpl = document.querySelector('#item') .content
+        const _itemTmpl = document.querySelector('#item') .content
         this.attachShadow({mode:
-            'open'} .appendChild(_itemTmpl.cloneNode(true))
+            'open'}).appendChild(_itemTmpl.cloneNode(true))
         }
 })
